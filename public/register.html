@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="../src/input.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="flex">
+
+        <div class="flex-1 hidden md:block"
+            style="background: url('../src/assets/register-bg.png') no-repeat center center; background-size: cover;">
+        </div>
+
+        <div class="relative flex-1 max-w-lg px-12">
+            <div class="relative flex flex-col items-start justify-center py-16">
+                <img src="../src/assets/mpos-logo-1.png" alt="MPOS-logo" height="160" width="160" class="-mt-5 mb-5">
+                <form class="w-full">
+                    <p class="font-bold text-primary">Create an account</p>
+    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div>
+                            <p class="text-sm">First Name</p>
+                            <input type="text" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-sm font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                        </div>
+                        <div>
+                            <p class="text-sm">Last Name</p>
+                            <input type="text" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-sm font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                        </div>
+                    </div>
+    
+                    <div class="mt-5">
+                        <p class="text-sm">Email</p>
+                        <input type="email" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-sm font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                    </div>
+    
+                    <div class="mt-5">
+                        <p class="text-sm">Password</p>
+                        <input type="email" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-sm font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                    </div>
+    
+                    <div class="mt-5">
+                        <p class="text-sm">Repeat Password</p>
+                        <input type="email" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-sm font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                    </div>
+    
+                    <div class="mt-3">
+                        <input type="checkbox" id="checkbox" name="vehicle1" value="Bike">
+                        <label for="checkbox" class="text-sm">Accept terms and conditions</label>
+                    </div>
+    
+                    <button type="submit" class="bg-primary rounded-sm text-white text-sm px-8 py-2 mt-5">Sign up</button>
+    
+                </form>
+    
+                <div class="mt-5">
+                    <a href="./login.html" class="mt-16 text-primary underline text-sm">Click here to login</a>
+                </div>
+                <p class="absolute bottom-2 text-black text-xs">All rights reserved. Powered by Mitiget</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
