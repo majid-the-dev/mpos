@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="../src/input.css">
-    <title>Dashboard</title>
+    <title>New Purchase</title>
 </head>
 
 <body class="text-gray-800 font-inter">
@@ -64,7 +64,7 @@
 
 
         </div>
-        
+
     </div>
     <!-- end: Sidebar -->
 
@@ -74,7 +74,7 @@
         <nav class="bg-primary flex items-center justify-between py-3 px-8 sticky top-0 left-0 z-30">
 
             <h1 class="text-white text-xs hidden lg:block">
-                Dasboard
+                Stock Update / New Purchases
             </h1>
 
             <img src="/src/assets/search-icon.png" class="block lg:hidden" width="20" alt="">
@@ -101,76 +101,61 @@
             </div>
         </nav>
 
-        <div class="lg:hidden bg-lightGrey px-8 py-2">
+        <div class="flex justify-between items-center lg:hidden bg-lightGrey px-8 py-2">
             <img src="/src/assets/menu-icon.png" class="cursor-pointer" width="35" alt="">
+            <img src="/src/assets/menu-icon-2.png" class="cursor-pointer" width="35" alt="">
         </div>
 
-        <div class="flex overflow-x-auto">
-
-            <div class="flex-1 hidden lg:block">
-                <img src="/src/assets/login-bg.png" alt="" class="object-cover">
+        <div class="flex flex-col lg:flex-row gap-9 px-8 pt-8 pb-12">
+            <div class="flex-1">
+                <div class="bg-gray-200 border-2 border-gray-300 rounded-sm p-8">
+                    <p class="text-xs text-primary font-medium">Existing Stock Record</p>
+                    <ul class="flex flex-col gap-3 text-xs font-medium mt-4">
+                        <li class="border border-b-gray-300 pb-3">Name: Milk 250G</li>
+                        <li class="border border-b-gray-300 pb-3">sku: 88654-654345</li>
+                        <li class="border border-b-gray-300 pb-3">Last Purchase Price: N 2400</li>
+                        <li class="border border-b-gray-300 pb-3">Present Selling price: N 2500</li>
+                        <li class="border border-b-gray-300 pb-3">Existing Stock Quantity: 10</li>
+                        <li>Measure: Packs</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="flex-1 flex flex-col gap-5 p-8 text-white">
+            <div class="flex-1">
+                <div class="border-2 border-gray-200 rounded-sm p-8">
+                    <p class="text-xs font-medium text-primary">Enter New Stock Record</p>
 
-                <div class="flex flex-row gap-5">
-                    <div class="flex-1 flex flex-col gap-12 justify-between bg-secondary px-4 py-3 rounded-md">
-                        <p class="text-xl">N 450, 000</p>
-                        <p class="text-xs font-medium">Total Sales</p>
-                    </div>
-                    <div class="flex-2 flex flex-col gap-12 justify-between bg-primary px-4 py-3 rounded-md">
-                        <p class="text-xl">123</p>
-                        <p class="text-xs font-medium">Total Transactions</p>
-                    </div>
+                    <form class="flex flex-col gap-5 mt-4">
+                        <div class="flex flex-col md:flex-row gap-5 md:gap-7 w-full">
+                            <div class="w-full">
+                                <p class="text-xs">New Quantity</p>
+                                <input type="number" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-xs font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                            </div>
+                            <div class="w-full">
+                                <p class="text-xs">New Stock Status</p>
+                                <input type="number" class="login-input ring-1 bg-gray-200 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-xs font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <p class="text-xs">New Purchase Price</p>
+                            <input type="number" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-xs font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                        </div>
+                        <div class="w-full">
+                            <p class="text-xs">New Selling Price</p>
+                            <input type="number" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-xs font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                        </div>
+                        <div class="w-full">
+                            <p class="text-xs">Purchase Date</p>
+                            <input type="date" class="login-input ring-1 ring-gray-300 focus:ring-primary focus:shadow-gray-100 focus:shadow-lg text-xs font-medium rounded-sm px-3 py-2 mt-2 w-full">
+                        </div>
+                    </form>
                 </div>
 
-                <div class="flex gap-5 w-full">
-                    <div class="bg-primary w-full flex flex-col gap-8 justify-between px-4 py-5 rounded-md">
-                        <p class="text-xl">21</p>
-                        <p class="text-xs font-medium">Canceled Transactions</p>
-                    </div>
-                    <div class="bg-secondary w-full flex flex-col justify-between px-4 py-3 rounded-md">
-                        <p class="text-xl">100</p>
-                        <p class="text-xs font-medium">Completed Transactions</p>
-                    </div>
-                    <div class="bg-primary w-full flex flex-col justify-between px-4 py-3 rounded-md">
-                        <p class="text-xl">2</p>
-                        <p class="text-xs font-medium">Returned Transactions</p>
-                    </div>
+                <div class="flex gap-5 md:justify-end mt-8">
+                    <button class="border-primary border-2 text-xs font-medium px-8 py-3 rounded-sm hover:bg-primary hover:text-white transition-all">Cancel</button>
+                    <button class="bg-primary text-white text-xs font-medium px-8 py-3 rounded-sm">Save Changes</button>
                 </div>
-
-                <div class="flex flex-row gap-5">
-                    <div class="flex-2 grid grid-cols-2 gap-3">
-                        <div class="col-span-1 bg-primary flex flex-col gap-2 justify-between py-2 px-2 rounded-md">
-                            <img src="/src/assets/pos-icon.png" width="30" alt="">
-                            <p class="text-xs font-medium">POS</p>
-                        </div>
-                        <div class="col-span-1 bg-primary flex flex-col gap-2 justify-between py-2 px-2 rounded-md">
-                            <img src="/src/assets/product-icon.png" width="30" alt="">
-                            <p class="text-xs font-medium">PRODUCT</p>
-                        </div>
-                        <div class="col-span-1 bg-primary flex flex-col gap-2 justify-between py-2 px-2 rounded-md">
-                            <img src="/src/assets/scan-icon.png" width="30" alt="">
-                            <p class="text-xs font-medium">SCAN</p>
-                        </div>
-                        <div class="col-span-1 bg-primary flex flex-col gap-2 justify-between py-2 px-2 rounded-md">
-                            <img src="/src/assets/cacl-icon.png" width="30" alt="">
-                            <p class="text-xs font-medium">CACL</p>
-                        </div>
-                    </div>
-
-                    <div class="flex-1 bg-primary flex flex-col justify-evenly px-4 py-3 rounded-md">
-                        <p class="text-xl">8</p>
-                        <p class="text-xs font-medium">Stock Alert</p>
-                    </div>
-                </div>
-
-                <div class="bg-primary flex items-end px-4 h-full py-3 rounded-md">
-                    <p class="text-xs font-medium">Reports</p>
-                </div>
-                
             </div>
-
         </div>
 
     </main>

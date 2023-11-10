@@ -12,3 +12,28 @@ input:focus,
 input:active {
     outline: none;
 }
+
+.products {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    background: red;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* overflow-y: auto; */
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+nav {
+    width: 100%;
+}
