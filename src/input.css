@@ -9,7 +9,9 @@
 }
 
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
     outline: none;
 }
 
